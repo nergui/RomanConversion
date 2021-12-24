@@ -1,11 +1,11 @@
-#Roman Numeral Converter
+## Roman Numeral Converter
 
 * [Summary](#Summary)
-* [How to run the project](#how-to-run)
+* [How to run the project](#How-to-run)
 * [Packaging layout](#Packaging-layout)
 * [Testing](#Testing)
 * [Dependency attribution](#Dependency-attribution)
-* [How to run roman conversion service in docker container](##How-to-run-roman-conversion-service-in-docker-container)
+* [How to run roman conversion service in docker container](#How-to-run-roman-conversion-service-in-docker-container)
 
 ## Summary
 Rest java web service to convert numbers to roman numeral as strings. The main service endpoint is `/romannumeral` and can be used as follows:
@@ -36,19 +36,19 @@ Also available are the following spring boot actuator endpoints:
 /actuator/info
 /actuator/metrics
 ```
-#how-to-run
+## How-to-run
 To run the application, run the following command in a terminal:
 ```js
 ./gradlew bootRun
 ```
 * Build and test with `./gradlew build`
-#Packaging-Layout
+## Packaging-Layout
 * The main packages are located in `src/main/java/com/roman/converter`
     1. Controller - Currently, I have only one controller for our service.
     2. RomanNumeral - Model
     3. Service - Currently, I have an interface for roman number conversion maybe later we might come up with different implications
 * Unit tests and Integration tests are located in `src/test/java/com/roman/converter`
-#Testing
+## Testing
 As per Unit tests and Integration tests, I have 95% of line covered as per `jacoco test report` and please see the below details
 ```js
 ./gradlew jacocoTestRepor
@@ -63,7 +63,7 @@ Test Coverage:
 - Complexity Coverage: 87.5%
 
 ```
-#Dependency-attribution  
+## Dependency-attribution  
 * Gradle
 * Java
 * Spring boot 2.6.2
@@ -72,7 +72,7 @@ Test Coverage:
 * JUnitParams 1.1.1
 * Lombok 1.18.22
 
-#How-to-run-roman-conversion-service-in-docker-container
+## How-to-run-roman-conversion-service-in-docker-container
 1. Create a jar
 ```js
 ./gradlew build
