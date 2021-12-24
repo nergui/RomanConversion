@@ -6,6 +6,7 @@
 * [Testing](#Testing)
 * [Dependency attribution](#Dependency-attribution)
 * [How to run roman conversion service in docker container](#How-to-run-roman-conversion-service-in-docker-container)
+* [References](#References)
 
 ## Summary
 Rest java web service to convert numbers to roman numeral as strings. The main service endpoint is `/romannumeral` and can be used as follows:
@@ -85,4 +86,9 @@ docker build -t app-roman-conversion-1.0.0.jar .
 ```js
    docker run -p 9091:8080 app-roman-conversion-1.0.0.jar
 ```
+
+
+## References
+1. https://en.wikipedia.org/wiki/Roman_numerals
+2. http://www.novaroma.org/via_romana/numbers.html
 
