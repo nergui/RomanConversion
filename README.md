@@ -5,7 +5,6 @@
 * [Error handling](#Error-handling)
 * [Additional endpoints](#Additional-endpoints)
 * [Packaging layout](#Packaging-layout)
-* [Testing](#Testing)
 * [Dependency attribution](#Dependency-attribution)
 * [How to run roman conversion service in docker container](#How-to-run-roman-conversion-service-in-docker-container)
 * [References](#References)
@@ -38,6 +37,31 @@ GET http://localhost:8080/romannumeral?query=WrongInput
 Response:
 ```js
 {"status":"400","message":"Query input must be a valid number.","time":"Sat Dec 25 17:58:11 PST 2021"}
+```
+Request:
+```js
+GET http://localhost:8080/romannumeral
+```
+Response:
+```js
+{"status":"400","message":"Query input must be a valid number.","time":"Sun Dec 26 12:44:53 PST 2021"}
+```
+Request:
+```js
+GET http://localhost:8080/romannumeral?query=null
+```
+Response:
+```js
+{"status":"400","message":"Query input must be a valid number.","time":"Sun Dec 26 12:46:12 PST 2021"}
+```
+
+Request:
+```js
+GET http://localhost:8080/romannumeral?query=2.3
+```
+Response:
+```js
+{"status":"400","message":"Query input must be a valid number.","time":"Sun Dec 26 12:46:53 PST 2021"}
 ```
 ## Additional-endpoints
 Also available are the following spring boot actuator endpoints for developers:

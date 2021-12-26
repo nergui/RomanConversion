@@ -34,7 +34,7 @@ public class Controller {
      * @return json body that contains original number and roman numeral conversion.
      */
     @RequestMapping("/romannumeral")
-    public RomanNumeral romanNumeral(@RequestParam(value = "query") String query) {
+    public RomanNumeral romanNumeral(@RequestParam(value = "query", required = false) String query) {
             Integer input = Integer.parseInt(query);
             if (input < 1 || input > 3999) {
                 throw new BadRequestException("Query input must be a valid number and between 1 and 3999");

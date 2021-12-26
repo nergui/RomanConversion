@@ -12,10 +12,6 @@ public class RomanNumberServiceImp implements RomanNumberService {
     private final int MAX_ROMAN_NUMBER = 3999;
     private Map<Integer, RomanNumeral> romanNumberCache = null;
 
-    public RomanNumberServiceImp() {
-        romanNumberCache = calculateRomanNumbers();
-    }
-
     static {
         romanNumerals.put(1, "I");
         romanNumerals.put(4, "IV");
@@ -32,8 +28,13 @@ public class RomanNumberServiceImp implements RomanNumberService {
         romanNumerals.put(1000, "M");
     }
 
+    public RomanNumberServiceImp() {
+        romanNumberCache = calculateRomanNumbers();
+    }
+
     /**
      * give int number, calculate roman numeral and return it.
+     *
      * @param number
      * @return {input: number, output: romanNumber}
      */

@@ -26,7 +26,7 @@ public class IntegrationTests {
     HttpHeaders headers = new HttpHeaders();
 
     private String createURLPort(String uri) {
-        return String.format("http://localhost:%d%s", portNumber, uri) ;
+        return String.format("http://localhost:%d%s", portNumber, uri);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class IntegrationTests {
     }
 
     @Test
-    public void negativeTestWithEmptyRequest(){
+    public void negativeTestWithEmptyRequest() {
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
 
@@ -55,7 +55,7 @@ public class IntegrationTests {
     }
 
     @Test
-    public void negativeTestWithString(){
+    public void negativeTestWithString() {
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
 
@@ -79,7 +79,7 @@ public class IntegrationTests {
     }
 
     @Test
-    public void negativeTestWithTooBigNumber(){
+    public void negativeTestWithTooBigNumber() {
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
 
@@ -91,7 +91,7 @@ public class IntegrationTests {
     }
 
     @Test
-    public void negativeTestWithDecimal(){
+    public void negativeTestWithDecimal() {
 
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
 
