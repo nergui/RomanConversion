@@ -40,7 +40,7 @@ Response:
 {"status":"400","message":"Query input must be a valid number.","time":"Sat Dec 25 17:58:11 PST 2021"}
 ```
 ## Additional-endpoints
-Also available are the following spring boot actuator endpoints:
+Also available are the following spring boot actuator endpoints for developers:
 ```js
 /actuator
 /actuator/metrics
