@@ -38,7 +38,7 @@ public class Controller {
     @RequestMapping("/romannumeral")
     public RomanNumeral romanNumeral(@RequestParam(value = "query") Integer query) {
         if (query < 1 || query > 3999) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Requested roman numeral is not between 1 and 3999");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Query input must be a valid number and between 1 and 3999");
         }
         log.info("User requested query " + query);
 
