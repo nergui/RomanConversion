@@ -33,37 +33,24 @@ Response: 400 BAD_REQUEST
 Also available are the following spring boot actuator endpoints:
 ```js
 /actuator
-/actuator/health
-/actuator/info
 /actuator/metrics
+/actuator/health
+/actuator/loggers
 ```
 ## How-to-run
 To run the application, run the following command in a terminal:
 ```js
 ./gradlew bootRun
 ```
-* Build and test with `./gradlew build`
+* Build `./gradlew build`
+* Run test with coverage `./gradlew jacocoTestReport`
 ## Packaging-Layout
 * The main packages are located in `src/main/java/com/roman/converter`
     1. Controller - Currently, I have only one controller for our service.
     2. RomanNumeral - Model
     3. Service - Currently, I have an interface for roman number conversion maybe later we might come up with different implications
 * Unit tests and Integration tests are located in `src/test/java/com/roman/converter`
-## Testing
-As per Unit tests and Integration tests, 95% of line covered as per `jacoco test report` and please see the below details
-```js
-./gradlew jacocoTestReport
-```
-```js
-Test Coverage:
-- Class Coverage: 100%
-- Method Coverage: 83.3%
-- Branch Coverage: 100%
-- Line Coverage: 95%
-- Instruction Coverage: 93.1%
-- Complexity Coverage: 87.5%
 
-```
 ## Dependency-attribution  
 * Gradle
 * Java
