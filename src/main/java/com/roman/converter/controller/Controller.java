@@ -26,21 +26,21 @@ public class Controller {
      * <p>
      * For example:
      * /romannumeral?query=3
-     *      {
-     *          input: 3
-     *          output: III
-     *      }
+     * {
+     * input: "3"
+     * output: "III"
+     * }
      *
      * @param query input to convert to roman numeral
      * @return json body that contains original number and roman numeral conversion.
      */
     @RequestMapping("/romannumeral")
-    public RomanNumeral romanNumeral(@RequestParam(value = "query") Integer query) {
-        if (query==null || query < 1 || query > 3999) {
-            throw new BadRequestException("Query input must be a valid number and between 1 and 3999");
-        }
-        log.info("User requested query " + query);
-
-        return romanNumberService.getRomanNumber(query);
+    public RomanNumeral romanNumeral(@RequestParam(value = "query") String query) {
+            Integer input = Integer.parseInt(query);
+            if (input == null || input < 1 || input > 3999) {
+                throw new BadRequestException("Query input must be a valid number and between 1 and 3999");
+            }
+            log.info("User requested query " + query);
+            return romanNumberService.getRomanNumber(input);
     }
 }

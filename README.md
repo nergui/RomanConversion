@@ -25,10 +25,20 @@ Response:
 ## Error handling
 Request:
 ```js
-GET http://localhost:8080/romannumera?query=9.1
+GET http://localhost:8080/romannumeral?query=-1
 ```
-Response: 400 BAD_REQUEST
-
+Response:
+```js
+{"status":"400","message":"Query input must be a valid number and between 1 and 3999","time":"Sat Dec 25 17:32:19 PST 2021"}
+```
+Request:
+```js
+GET http://localhost:8080/romannumeral?query=WrongInput
+```
+Response:
+```js
+{"status":"400","message":"Query input must be a int number.","time":"Sat Dec 25 17:58:11 PST 2021"}
+```
 ## Additional-endpoints
 Also available are the following spring boot actuator endpoints:
 ```js
