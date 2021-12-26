@@ -1,4 +1,4 @@
-package com.roman.converter.exception;
+package com.roman.convertor.exception;
 
 import lombok.Getter;
 import lombok.Setter;

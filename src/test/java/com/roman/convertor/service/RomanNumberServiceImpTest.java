@@ -1,6 +1,6 @@
-package com.roman.converter.service;
+package com.roman.convertor.service;
 
-import com.roman.converter.models.RomanNumeral;
+import com.roman.convertor.models.RomanNumeral;
 import junitparams.JUnitParamsRunner;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

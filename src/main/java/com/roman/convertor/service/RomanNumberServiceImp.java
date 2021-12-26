@@ -1,6 +1,6 @@
-package com.roman.converter.service;
+package com.roman.convertor.service;
 
-import com.roman.converter.models.RomanNumeral;
+import com.roman.convertor.models.RomanNumeral;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
@@ -35,7 +35,7 @@ public class RomanNumberServiceImp implements RomanNumberService {
     /**
      * give int number, calculate roman numeral and return it.
      * @param number
-     * @return {number, RomanNumeral}
+     * @return {input: number, output: romanNumber}
      */
     @Override
     public RomanNumeral convert(int number) {

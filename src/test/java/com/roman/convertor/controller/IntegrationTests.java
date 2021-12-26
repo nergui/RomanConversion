@@ -1,6 +1,6 @@
-package com.roman.converter.controller;
+package com.roman.convertor.controller;
 
-import com.roman.converter.ConverterApplication;
+import com.roman.convertor.ConverterApplication;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

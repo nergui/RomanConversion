@@ -1,8 +1,8 @@
-package com.roman.converter.controller;
+package com.roman.convertor.controller;
 
-import com.roman.converter.exception.BadRequestException;
-import com.roman.converter.models.RomanNumeral;
-import com.roman.converter.service.RomanNumberService;
+import com.roman.convertor.exception.BadRequestException;
+import com.roman.convertor.models.RomanNumeral;
+import com.roman.convertor.service.RomanNumberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,6 @@ public class Controller {
     /**
      * RomanNumeralController
      * Given an input number returns the corresponding roman numeral.
-     * <p>
      * For example:
      * /romannumeral?query=3
      * {
@@ -37,7 +36,7 @@ public class Controller {
     @RequestMapping("/romannumeral")
     public RomanNumeral romanNumeral(@RequestParam(value = "query") String query) {
             Integer input = Integer.parseInt(query);
-            if (input == null || input < 1 || input > 3999) {
+            if (input < 1 || input > 3999) {
                 throw new BadRequestException("Query input must be a valid number and between 1 and 3999");
             }
             log.info("User requested query " + query);

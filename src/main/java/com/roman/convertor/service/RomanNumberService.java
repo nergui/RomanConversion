@@ -1,6 +1,6 @@
-package com.roman.converter.service;
+package com.roman.convertor.service;
 
-import com.roman.converter.models.RomanNumeral;
+import com.roman.convertor.models.RomanNumeral;
 
 /***
  *

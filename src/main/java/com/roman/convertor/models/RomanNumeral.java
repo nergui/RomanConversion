@@ -1,4 +1,4 @@
-package com.roman.converter.models;
+package com.roman.convertor.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
