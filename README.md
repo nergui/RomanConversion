@@ -13,8 +13,6 @@
 ## Summary
 Rest java web service to convert numbers to roman numeral as strings. The main service endpoint is `/romannumeral` and can be used as follows:
 
-Reference: https://en.wikipedia.org/wiki/Roman_numerals
-
 Request:
 ```js
 GET http://localhost:8080/romannumeral?query=21
