@@ -3,7 +3,7 @@
 * [Summary](#Summary)
 * [How to run the project](#How-to-run)
 * [Error handling](#Error-handling)
-* [Additional endpoints](#Additional endpoints)
+* [Additional endpoints](#Additional-endpoints)
 * [Packaging layout](#Packaging-layout)
 * [Testing](#Testing)
 * [Dependency attribution](#Dependency-attribution)
@@ -29,7 +29,7 @@ GET http://localhost:8080/romannumera?query=9.1
 ```
 Response: 400 BAD_REQUEST
 
-## Additional endpoints
+## Additional-endpoints
 Also available are the following spring boot actuator endpoints:
 ```js
 /actuator
