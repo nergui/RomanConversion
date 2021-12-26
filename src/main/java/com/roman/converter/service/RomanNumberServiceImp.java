@@ -42,7 +42,8 @@ public class RomanNumberServiceImp implements RomanNumberService {
         if (number < MIN_ROMAN_NUMBER || number > MAX_ROMAN_NUMBER) {
             return new RomanNumeral();
         }
-        RomanNumeral romanNumeral = new RomanNumeral(number);
+        RomanNumeral romanNumeral = new RomanNumeral();
+        romanNumeral.setInput(String.valueOf(number));
         StringBuilder sb = new StringBuilder();
 
         while (number > 0) {
@@ -51,7 +52,7 @@ public class RomanNumberServiceImp implements RomanNumberService {
             sb.append(numeral);
             number -= floored;
         }
-        romanNumeral.setRomanNumeral(sb.toString());
+        romanNumeral.setOutput(sb.toString());
         return romanNumeral;
     }
 

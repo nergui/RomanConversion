@@ -2,6 +2,8 @@
 
 * [Summary](#Summary)
 * [How to run the project](#How-to-run)
+* [Error handling](#Error-handling)
+* [Additional endpoints](#Additional endpoints)
 * [Packaging layout](#Packaging-layout)
 * [Testing](#Testing)
 * [Dependency attribution](#Dependency-attribution)
@@ -19,9 +21,8 @@ GET http://localhost:8080/romannumeral?query=21
 ```
 Response:
 ```js
-{ numeral: 21, romanNumeral: "XXI" }
+{"input":"2","output":"II"}
 ```
-Response:
 
 ## Error handling
 Request:
@@ -30,6 +31,7 @@ GET http://localhost:8080/romannumera?query=9.1
 ```
 Response: 400 BAD_REQUEST
 
+## Additional endpoints
 Also available are the following spring boot actuator endpoints:
 ```js
 /actuator
@@ -50,9 +52,9 @@ To run the application, run the following command in a terminal:
     3. Service - Currently, I have an interface for roman number conversion maybe later we might come up with different implications
 * Unit tests and Integration tests are located in `src/test/java/com/roman/converter`
 ## Testing
-As per Unit tests and Integration tests, I have 95% of line covered as per `jacoco test report` and please see the below details
+As per Unit tests and Integration tests, 95% of line covered as per `jacoco test report` and please see the below details
 ```js
-./gradlew jacocoTestRepor
+./gradlew jacocoTestReport
 ```
 ```js
 Test Coverage:
@@ -78,7 +80,7 @@ Test Coverage:
 ```js
 ./gradlew build
 ```
-3. create Docker Image
+2. create Docker Image
 ```js
 docker build -t app-roman-conversion-1.0.0.jar .
 ```

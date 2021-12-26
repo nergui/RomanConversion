@@ -10,9 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RomanNumeral {
-    private Integer numeral;
-    private String romanNumeral;
-    public RomanNumeral(Integer numeral) {
-        this.numeral = numeral;
+    private String input;
+    private String output;
+    public RomanNumeral(String numeral) {
+        this.input = numeral;
     }
 }

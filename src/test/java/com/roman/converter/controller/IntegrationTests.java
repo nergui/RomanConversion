@@ -38,7 +38,7 @@ public class IntegrationTests {
                 createURLPort(ENDPOINT + "2021"),
                 HttpMethod.GET, entity, String.class);
 
-        String expected = "{numeral:2021, romanNumeral:MMXXI}";
+        String expected = "{\"input\":\"2021\",\"output\":\"MMXXI\"}";
         JSONAssert.assertEquals(expected, response.getBody(), false);
     }
 

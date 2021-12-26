@@ -28,21 +28,20 @@ public class Controller {
      * For example:
      * /romannumeral?query=3
      *      {
-     *          numeral: 3
-     *          romanNumeral: III
+     *          input: 3
+     *          output: III
      *      }
      *
      * @param query input to convert to roman numeral
      * @return json body that contains original number and roman numeral conversion.
      */
     @RequestMapping("/romannumeral")
-    public RomanNumeral romanNumeral(@RequestParam(value = "query", defaultValue = "1") Integer query) {
+    public RomanNumeral romanNumeral(@RequestParam(value = "query") Integer query) {
         if (query < 1 || query > 3999) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Requested roman numeral is not between 1 and 3999");
         }
         log.info("User requested query " + query);
 
-        //return romanNumberService.convert(query);
         return romanNumberService.getRomanNumber(query);
     }
 }

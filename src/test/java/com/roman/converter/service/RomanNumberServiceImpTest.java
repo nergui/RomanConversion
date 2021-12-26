@@ -2,7 +2,6 @@ package com.roman.converter.service;
 
 import com.roman.converter.models.RomanNumeral;
 import junitparams.JUnitParamsRunner;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -37,7 +36,7 @@ public class RomanNumberServiceImpTest {
     public void testCreateRomanNumeral(String s) {
         String[] input = s.split(",");
         RomanNumeral romanNumeral = service.convert(Integer.parseInt(input[0]));
-        assertEquals(input[1], romanNumeral.getRomanNumeral());
+        assertEquals(input[1], romanNumeral.getOutput());
     }
 
     @ParameterizedTest
@@ -45,7 +44,7 @@ public class RomanNumberServiceImpTest {
     void positiveTestCalculateRomanNumbers(String input, String expected) {
         Map<Integer, RomanNumeral>  cache = service.calculateRomanNumbers();
         RomanNumeral romanNumeral = cache.get(Integer.parseInt(input));
-        assertEquals(expected, romanNumeral.getRomanNumeral());
+        assertEquals(expected, romanNumeral.getOutput());
     }
 
     @ParameterizedTest
@@ -57,6 +56,6 @@ public class RomanNumberServiceImpTest {
     })
     public void testInvalidRomanNumeral(int numeral) {
         RomanNumeral romanNumeral = service.convert(numeral);
-        assertEquals(null, romanNumeral.getRomanNumeral());
+        assertEquals(null, romanNumeral.getOutput());
     }
 }
