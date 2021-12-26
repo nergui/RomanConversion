@@ -56,9 +56,9 @@ To run the application, run the following command in a terminal:
 * Run test with coverage `./gradlew jacocoTestReport`
 ## Packaging-Layout
 * The main packages are located in `src/main/java/com/roman/converter`
-    1. Controller - Currently, I have only one controller for our service.
+    1. Controller - Controller
     2. RomanNumeral - Model
-    3. Service - Currently, I have an interface for roman number conversion maybe later we might come up with different implications
+    3. Service -  the interface for roman number conversion maybe later we might come up with different implementation
 * Unit tests and Integration tests are located in `src/test/java/com/roman/converter`
 
 ## Dependency-attribution  
