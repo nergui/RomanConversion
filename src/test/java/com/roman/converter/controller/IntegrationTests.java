@@ -51,7 +51,7 @@ public class IntegrationTests {
                 createURLPort(ENDPOINT),
                 HttpMethod.GET, entity, String.class);
 
-        assertThat(response.getStatusCodeValue(), is(200));
+        assertThat(response.getStatusCodeValue(), is(400));
     }
 
     @Test

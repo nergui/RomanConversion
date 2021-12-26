@@ -19,7 +19,7 @@ GET http://localhost:8080/romannumeral?query=21
 ```
 Response:
 ```js
-{"input":"2","output":"II"}
+{"input":"21","output":"XXI"}
 ```
 
 ## Error handling
