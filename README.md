@@ -84,7 +84,7 @@ docker build -t app-roman-conversion-1.0.0.jar .
 ```
 3. Run roman conversion service in a Docker Container
 ```js
-   docker run -p 9091:8080 app-roman-conversion-1.0.0.jar
+docker run -p 9091:8080 app-roman-conversion-1.0.0.jar
 ```
 
 
