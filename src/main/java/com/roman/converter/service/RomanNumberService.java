@@ -3,8 +3,8 @@ package com.roman.converter.service;
 import com.roman.converter.models.RomanNumeral;
 
 /***
- * In order to support different implications for roman conversion,
- * I have created an interface and exposed 2 main methods that might be useful.
+ *
+ * this interface for roman number conversion maybe later we might come up with different implementation
  *
  */
 public interface RomanNumberService {
