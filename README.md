@@ -37,7 +37,7 @@ GET http://localhost:8080/romannumeral?query=WrongInput
 ```
 Response:
 ```js
-{"status":"400","message":"Query input must be a int number.","time":"Sat Dec 25 17:58:11 PST 2021"}
+{"status":"400","message":"Query input must be a valid number.","time":"Sat Dec 25 17:58:11 PST 2021"}
 ```
 ## Additional-endpoints
 Also available are the following spring boot actuator endpoints:
